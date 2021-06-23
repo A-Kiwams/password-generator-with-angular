@@ -39,5 +39,3 @@ export class AppComponent {
     this.password = 'my password';
   }
 }
-
-// code ends
