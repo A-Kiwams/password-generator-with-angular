@@ -35,6 +35,17 @@ export class AppComponent {
   onButtonClick(){
     const numbers = '1234567890';
     const letters = 'abcdefghijklnmopqrstuvwxyz';
-    const symbols = '!@#$%*^?\{()_|~}]';
+    const symbols = '!@#$%*^?\()~';
+
+    let validChards = '';
+    if(this.includeLetters){
+      validChards += letters;
+    }
+    if(this.includeNumbers){
+      validChards += numbers;
+    }
+    if(this.includeSymbols){
+      validChards += symbols;
+    }
   }
 }
