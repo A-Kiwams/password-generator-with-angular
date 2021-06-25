@@ -33,9 +33,8 @@ export class AppComponent {
   }
 
   onButtonClick(){
-    console.log(this.includeLetters);
-    console.log(this.includeNumbers);
-    console.log(this.includeSymbols);
-    this.password = 'my password';
+    const numbers = '1234567890';
+    const letters = 'abcdefghijklnmopqrstuvwxyz';
+    const symbols = '!@#$%*^?\{()_|~}]';
   }
 }
