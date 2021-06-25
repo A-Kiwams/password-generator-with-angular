@@ -37,15 +37,22 @@ export class AppComponent {
     const letters = 'abcdefghijklnmopqrstuvwxyz';
     const symbols = '!@#$%*^?\()~';
 
-    let validChards = '';
-    if(this.includeLetters){
-      validChards += letters;
+    let validChars = '';
+    if (this.includeLetters){
+      validChars += letters;
     }
-    if(this.includeNumbers){
-      validChards += numbers;
+    if (this.includeNumbers){
+      validChars += numbers;
     }
-    if(this.includeSymbols){
-      validChards += symbols;
+    if (this.includeSymbols){
+      validChars += symbols;
     }
+
+    let generatedPassword = '';
+    for (let i = 0; i < this.length; i++){
+      const index = Math.floor(Math.random() * validChars.length);
+      generatedPassword += validChars[index];
+    }
+    this.password = generatedPassword;
   }
 }
