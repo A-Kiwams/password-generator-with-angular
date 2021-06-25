@@ -1,3 +1,4 @@
+<!------ using bulma-css:https://bulma.io/  insatlled via npm------>
 <div class="container">
   <div class="columns is-centered">
     <div class="box column is-one-third">
@@ -37,7 +38,8 @@
 
       <button [disabled]="!(length && (includeLetters || includeSymbols || includeNumbers))" (click)="onButtonClick()" class="button is-link is-fullwidth">Generate!</button>
 
-      <div class="box">
+      <!------ structural directive: to hide/show password text field------>
+      <div class="box" *ngIf="password">
         <label>Your Password</label>
         <input class="input" [value]="password" />
       </div>
